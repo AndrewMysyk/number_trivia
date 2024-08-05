@@ -1,0 +1,54 @@
+name: number_trivia
+description: "Number Trivia"
+
+publish_to: 'none'
+
+version: 0.0.1+1
+
+environment:
+  sdk: '>=3.4.0 <4.0.0'
+
+dependencies:
+  auto_route: ^9.1.0
+  bloc_concurrency: ^0.2.5
+  connectivity_plus: ^6.0.4
+  cupertino_icons: ^1.0.8
+  dartz: ^0.10.1
+  drift: ^2.19.1+1
+  drift_flutter: ^0.1.0
+  equatable: ^2.0.5
+  flutter:
+    sdk: flutter
+  flutter_bloc: ^8.1.6
+  get_it: ^7.7.0
+  http: ^1.2.2
+  injectable: ^2.4.4
+  intl: ^0.19.0
+  json_annotation: ^4.9.0
+  lint: ^2.3.0
+  shared_preferences: ^2.3.1
+
+dev_dependencies:
+  auto_route_generator: ^9.0.0
+  build_runner: ^2.4.11
+  drift_dev: ^2.19.1
+  flutter_lints: ^4.0.0
+  flutter_test:
+    sdk: flutter
+  import_sorter: ^4.6.0
+  injectable_generator: 2.6.2
+  json_serializable: ^6.8.0
+  mockito: ^5.4.4
+
+flutter:
+  uses-material-design: true
+flutter_intl:
+  enabled: true
+import_sorter:
+  emojis: true
+  comments: true
+  ignored_files:
+    - \/lib\/generated/
+    - \/lib\/injection.config.dart
+    - \/lib\/routes\/router.gr.dart
+    - \/lib\/generated_plugin_registrant.dart
