@@ -1,6 +1,30 @@
 part of 'number_trivia_bloc.dart';
 
 @immutable
-sealed class NumberTriviaState {}
+final class NumberTriviaState extends Equatable {
+  const NumberTriviaState({
+    this.numberTriviaOption = const None(),
+    this.isLoading = false,
+  });
 
-final class NumberTriviaInitial extends NumberTriviaState {}
+  final Option<NumberTrivia> numberTriviaOption;
+  final bool isLoading;
+
+  NumberTriviaState copyWith({
+    Option<NumberTrivia>? numberTriviaOption,
+    bool? isLoading,
+  }) {
+    return NumberTriviaState(
+      numberTriviaOption: numberTriviaOption ?? this.numberTriviaOption,
+      isLoading: isLoading ?? this.isLoading,
+    );
+  }
+
+  @override
+  List<Object?> get props {
+    return [
+      numberTriviaOption,
+      isLoading,
+    ];
+  }
+}
